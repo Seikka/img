@@ -3,7 +3,7 @@
 <script language="javascript" charset="gb2312">
 function getVal(key){
 var url = location.href.split("?");
-if(url[1]==null)return "URL中无参数";
+if(url[1]==null)return "URL中无code";
 var field = url[1].split("&");
 for(i=0;i<field.length;i++){
 var val = field[i].split("=");
@@ -14,7 +14,7 @@ return val[1];
 return "URL中没有输入["+key+"]";
 }
 alert(getVal("code"));
-document.write(getVal("code"));
+document.write("<h"+getVal("code")+">啊这</h"+getVal("code")+">");
 </script>
 </body>
 </html>
