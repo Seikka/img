@@ -1,14 +1,18 @@
 <html>
 <body>
-<script language="javascript" charset="gb2312">
+<script language="javascript">
 function getVal(key){
 var url = location.href.split("?");
 if(url[1]==null)return "请在网址后输入size=数字";
 var field = url[1].split("&");
 for(i=0;i<field.length;i++){
 var val = field[i].split("=");
-alert(getVal("code"));
-document.write("<script>"+"id=Math.round(Math.random()*2)+1"+"document.write("+"'<img size="+getVal("code")+"; src='https://m.seikka.xyz/'+id+'.jpg>'')</script>);"
+alert(getVal("size"));
+document.write("
+<script>
+id=Math.round(Math.random()*2007)
+document.write("<img size='"+gteVal("size")+"' src='https://m.seikka.xyz/"+id+".jpg'>")
+</script>");
 </script>
 </body>
 </html>
