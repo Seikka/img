@@ -7,12 +7,9 @@ if(url[1]==null)return "请在网址后输入size=数字";
 var field = url[1].split("&");
 for(i=0;i<field.length;i++){
 var val = field[i].split("=");
-alert(getVal("size"));
-document.write("
-<script>
-id=Math.round(Math.random()*2007)
-document.write("<img size='"+gteVal("size")+"' src='https://m.seikka.xyz/"+id+".jpg'>")
-</script>");
+alert(getVal("x"));
+alert(getVal("y"));
+document.write("<iframe width='"+getVal("x")+"' height='"+getVal("y")+"' src='https://os.52msr.cn'></iframe>");
 </script>
 </body>
 </html>
