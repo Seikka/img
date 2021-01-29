@@ -1,3 +1,5 @@
+<html>
+<body>
 <script language="javascript">
 function getVal(key){
 var url = location.href.split("?");
@@ -6,7 +8,7 @@ var field = url[1].split("&");
 for(i=0;i<field.length;i++){
 var val = field[i].split("=");
 if(val[0]==key){
-return "成功编译：[val[1]]";
+return val[1];
 }
 }
 return "URL中没有输入["+key+"]";
@@ -14,3 +16,5 @@ return "URL中没有输入["+key+"]";
 alert(getVal("code"));
 document.write(getVal("code"));
 </script>
+</body>
+</html>
