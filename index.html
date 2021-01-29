@@ -1,18 +1,16 @@
-<script>
-  var params=(function(){
-  	var search=location.search;	//获取location的search属性，保存在search中
-  	var params={};		//创建空对象params
-  	if(search!=""){		//如果search不是空字符串
-      		search.slice(1).split("&").forEach(	//?username=zhangdong&pwd=123456;//search去开头?，按&切割为数组，forEach
-      			function(val){
-        			var arr=val.split("=");		//将当前元素值按=切割，保存在arr中
-          			params[arr[0]]=arr[1];		//向params中添加一个元素,属性名为arr[0],值为arr[1]
-      			}
-      		);
-   	}
-    	return params;		//返回params
-  })();
-  console.dir(params); 		//params:{username:"katherine",pwd:"123456"}
-  input = params
-  document.write(console.dir(params))
+<script language="javascript">
+function getVal(key){
+var url = location.href.split("?");
+if(url[1]==null)return "URL中无参数";
+var field = url[1].split("&");
+for(i=0;i<field.length;i++){
+var val = field[i].split("=");
+if(val[0]==key){
+return val[1];
+}
+}
+return "URL中没有传递参数["+key+"]";
+}
+alert(getVal("id"));
+document.writeln(getVal("id"));
 </script>
